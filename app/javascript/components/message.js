@@ -1,13 +1,14 @@
+
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchMessage } from "../redux/message/messageAction";
+import { fetchMessages } from "../redux/message/messageSlice";
 
 const Message = () => {
     const dispatch = useDispatch();
-    const message = useSelector((state) => state.message.message);
+    const message = useSelector((state) => state.messages);
 
     useEffect(() => {
-        dispatch(fetchMessage());
+        dispatch(fetchMessages());
     }, [dispatch]);
 
     return (
@@ -22,6 +23,6 @@ const Message = () => {
         </div>
         </>
     );
-};
+}
 
 export default Message;
