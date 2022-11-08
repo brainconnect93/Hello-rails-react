@@ -16,8 +16,8 @@ const Message = () => {
         <div>
             <h2>Refresh this page to see new message</h2>
             <ul>
-                {message.map((message) => (
-                    <li key={message.id}>{message.message}</li>
+                {message.map((m) => (
+                    <li key={m.id}>{m.greetings}</li>
                 ))}
             </ul>
         </div>
